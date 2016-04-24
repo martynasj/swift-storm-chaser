@@ -37,6 +37,13 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action,
+                target: self, action: #selector(DetailViewController.shareTapped))
+    }
+    
+    func shareTapped() {
+        let vc = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: [])
+        presentViewController(vc, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

@@ -117,6 +117,7 @@
                 <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.862434366961365" green="1" blue="0.91865116845595884" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
