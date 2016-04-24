@@ -13,7 +13,6 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects: [String] = []
 
-
     override func viewDidLoad() {
         print("view did load")
         super.viewDidLoad()

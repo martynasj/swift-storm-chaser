@@ -24,7 +24,6 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print("view will appear")
         configView()
         self.title = self.imageName
         navigationController?.hidesBarsOnTap = true
