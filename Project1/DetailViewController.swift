@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class DetailViewController: UIViewController {
 
@@ -38,12 +39,20 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action,
-                target: self, action: #selector(DetailViewController.shareTapped))
+                target: self, action: #selector(DetailViewController.postToFacebook))
     }
     
     func shareTapped() {
         let vc = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: [])
         presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    func postToFacebook() {
+        let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        vc.setInitialText("How nice this photo is")
+        vc.addImage(self.imageView.image)
+        presentViewController(vc, animated: true, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
